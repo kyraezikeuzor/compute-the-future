@@ -1,36 +1,37 @@
-import Icon from '../icon'
-import { Flex, Link, Text } from 'theme-ui'
+import { MessageCircle } from 'lucide-react'
+import Link from 'next/link'
 
 const phoneNumber = '+1 (844) 237-2290'
 const phoneNumberUri = '+1-844-237-2290'
-const email = 'hcb@hackclub.com'
+const email = 'contact@computefutures.com'
 
-export default function ContactBanner({ sx }) {
+export function ContactBanner({ className = '' }) {
   return (
-    <Flex
-      sx={{
-        bg: 'sunken',
-        color: 'slate',
-        alignItems: 'center',
-        p: 3,
-        gap: [3, 2],
-        ...sx
-      }}
+    <div 
+      className={`
+        flex items-center 
+        bg-gray-100/75 
+        text-gray-700 
+        p-2 
+        gap-1
+        justify-center
+        text-sm
+        ${className}
+      `}
     >
-      <Icon
-        glyph="message"
-        sx={{ color: 'inherit', flexShrink: 0, my: -1 }}
-        aria-hidden
+      <MessageCircle 
+        className="text-inherit flex-shrink-0 -my-1 w-4 h-4" 
+        aria-hidden 
       />
-      <Text
-        sx={{
-          textWrap: 'balance',
-          a: { color: 'inherit', mx: '0.125em', whiteSpace: 'nowrap' }
-        }}
-      >
-        Questions? Email <Link href={`mailto:${email}`}>{email}</Link>{' '}
-        or&nbsp;call <Link href={`tel:${phoneNumberUri}`}>{phoneNumber}</Link>
-      </Text>
-    </Flex>
+      <p className="text-wrap">
+        Questions? Email{' '}
+        <Link 
+          href={`mailto:${email}`} 
+          className="text-inherit mx-0.5 whitespace-nowrap  font-semibold"
+        >
+          {email}
+        </Link>{' '}
+      </p>
+    </div>
   )
 }

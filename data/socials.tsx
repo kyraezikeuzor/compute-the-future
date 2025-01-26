@@ -11,12 +11,12 @@ import {
   export const socials = [
     {
       name: "Mail",
-      link: "mailto:kyra@computefutures.org",
+      link: "mailto:contact@computefutures.org",
       icon: <Mail className="w-6 h-6 hover:text-blue-500 transition-colors duration-200" strokeWidth={2} />
     },
     {
       name: "Instagram",
-      link: "https://www.instagram.com/omeloraorg/",
+      link: "https://www.instagram.com/computefutures/",
       icon: <Instagram className="w-6 h-6 hover:text-pink-500 transition-colors duration-200" strokeWidth={2} />
     },
     {

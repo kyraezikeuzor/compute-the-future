@@ -4,7 +4,7 @@ export const team = [
         "about" : "Hi! I am a senior in high school. My hobbies are programming, running, reading, and writing. My goal is to be pre-med in college and minor in computer science. I hope to impact the medical field with computer science.",
         "role" : "Founder & President",
         "tags" : "Computer Science, Medicine",
-        "img" : "./images/kyra.png"
+        "img" : "./images/kyra.jpeg"
     },
     {
         "name": "Blair Middleton",

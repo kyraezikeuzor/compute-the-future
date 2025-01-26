@@ -5,7 +5,7 @@ export const navbar = [
     children: [
       {
         name: 'Live Classes',
-        path: '/classes',
+        path: 'https://forms.fillout.com/t/eeMcgNH5Fkus',
         description: 'Learn with a group of peers',
         icon: '👥'
       },
@@ -16,7 +16,7 @@ export const navbar = [
     children: [
       {
         name: 'Events',
-        path: '/events',
+        path: 'https://lu.ma/user/usr-m24zm9GWr3RfctQ',
         description: 'Join our upcoming events',
         icon: '📅'
       },
@@ -38,9 +38,9 @@ export const navbar = [
         icon: '🌟'
       },
       {
-        name: 'Sponsorship',
-        path: '/sponsorship',
-        description: 'Partner with us',
+        name: 'Founding',
+        path: '/founding',
+        description: 'Learn about how we started',
         icon: '🤝'
       }
     ]
@@ -55,17 +55,16 @@ export const navbar = [
         { name: 'Team', path: '/team' },
         { name: 'Philosophy', path: '/philosophy' },
         { name: 'Founding', path: '/founding' },
-        { name: 'Donate', path: '/donate' },
+        { name: 'Donate', path: 'https://www.paypal.com/donate/?hosted_button_id=UP3ZGFTQ7YZ96' },
       ]
     },
     {
       name: 'Resources',
       pages: [
-        { name: 'Events', path: '/events' },
-        { name: 'Press Inquiries', path: '/press-inquiries' },
-        { name: 'Privacy Policy', path: '/press-inquiries' },
+        { name: 'Events', path: 'https://lu.ma/user/usr-m24zm9GWr3RfctQ' },
+        { name: 'Privacy Policy', path: '/privacy-policy' },
         { name: 'Code of Conduct', path: '/code-of-conduct' },
-        { name: 'Contact Us', path: '/code-of-conduct' }
+        { name: 'Contact Us', path: '/contact' }
       ]
     }
   ];

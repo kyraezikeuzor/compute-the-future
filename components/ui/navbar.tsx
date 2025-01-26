@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Logo } from './logo'
 import { Button } from './button'
 import { navbar } from '@/data/sitemap'
-import { Menu, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
+import { Menu, X, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
 
 interface BaseNavigationItem {
     name: string;
@@ -24,6 +24,21 @@ export interface NavigationItem extends BaseNavigationItem {
 }
 
 export type NavigationItems = NavigationItem[];
+
+interface NavChild {
+  name: string;
+  path: string;
+  icon?: React.ReactNode;
+}
+
+interface NavItem {
+  name: string;
+  children?: NavChild[];
+}
+
+interface MobileMenuProps {
+  navbar: NavItem[];
+}
 
 export function hasChildren(item: NavigationItem): item is NavigationItem & { children: NavigationChild[] } {
     return Array.isArray(item.children) && item.children.length > 0;
@@ -99,12 +114,21 @@ const NavItem = ({ item }:{item:NavigationItem}) => {
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openSections, setOpenSections] = useState<Record<number, boolean>>({});
+
+  const toggleSection = (index: number): void => {
+    setOpenSections(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
 
   return (
-    <nav className='w-full flex flex-col items-center sticky top-0 z-50 bg-[--clr-base] border-b-2 border-gray-200 '>
+    <nav className='relative w-full flex flex-col items-center sticky top-0 z-50 bg-[--clr-base] border-b-2 border-gray-200 '>
       <div className='w-full bg-[--clr-blue-base] text-white py-1'>
-        <div className='flex flex-col lg:flex-row gap-1 items-center justify-center  text-[15px]'>
-          <p className='text-center font-normal'>Virtual Computer Science Camps Are in Session</p> <span className='flex flex-row gap-1 items-center text-yellow-200'>Explore now <ExternalLink className='w-4 h-4'/></span>
+        <div className='flex flex-row gap-1 items-center justify-center text-sm lg:text-[15px]'>
+          <p className='text-center font-normal'>Virtual Computer Science Camps Are in Session</p> <Link href='https://forms.fillout.com/t/eeMcgNH5Fkus' className='ml-1 flex flex-row gap-1 items-center text-yellow-200'>Explore Now <ExternalLink className='w-4 h-4'/></Link>
         </div>
       </div>
       <div className='hidden md:flex flex-row md:px-[4vw] py-[vh] w-full items-center justify-between 2xl:max-w-[1400px]'>
@@ -121,9 +145,9 @@ export function Navbar() {
                 ))}
             </ul>
         </div>
-        <div className=''>
-            <Button variant='ghost'>Join us</Button>
-            <Button>Donate</Button>
+        <div className='flex flex-row gap-1'>
+            <Button variant='ghost'><Link href='https://forms.fillout.com/t/eeMcgNH5Fkus'>Join Us</Link></Button>
+            <Button><Link href='https://www.paypal.com/donate/?hosted_button_id=UP3ZGFTQ7YZ96'>Donate</Link></Button>
         </div>
       </div>
 
@@ -134,46 +158,55 @@ export function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="p-2 rounded-lg hover:bg-gray-100"
         >
-          <Menu className="w-6 h-6" />
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden w-full bg-white border-t border-gray-200">
+        <div className="md:hidden fixed top-20 left-0 right-0 w-full bg-white border-b-2 border-r-2 border-l-2 border-gray-200 shadow-lg">
           <div className="px-5 py-4 space-y-2">
             {navbar.map((item, index) => (
-              <div key={index} className="py-1">
-                {item.children ? (
-                  <>
-                    <div className="font-medium py-2">{item.name}</div>
-                    <div className="pl-4 space-y-2">
-                      {item.children.map((child, childIndex) => (
-                        <Link
-                          key={childIndex}
-                          href={child.path}
-                          className="block py-2 text-gray-600 hover:text-gray-900"
-                        >
-                          <div className="flex items-center gap-3">
-                            {child.icon && (
-                              <span className="text-xl">{child.icon}</span>
-                            )}
-                            {child.name}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href={`/${item.name}`}
-                    className="block py-2 hover:text-[var(--clr-blue-base)]"
+            <div key={index} className="border-b border-gray-100 last:border-0">
+              {item.children ? (
+                <div>
+                  <button
+                    onClick={() => toggleSection(index)}
+                    className="w-full py-3 flex items-center justify-between font-medium"
                   >
                     {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
+                    {openSections[index] ? 
+                      <ChevronUp className="h-5 w-5" /> : 
+                      <ChevronDown className="h-5 w-5" />
+                    }
+                  </button>
+                  <div className={`pl-4 space-y-1 overflow-hidden transition-all duration-200 ${
+                    openSections[index] ? 'max-h-96 pb-3' : 'max-h-0'
+                  }`}>
+                    {item.children.map((child, childIndex) => (
+                      <Link
+                        key={childIndex}
+                        href={child.path}
+                        className="block py-2 text-gray-600 hover:text-gray-900"
+                      >
+                        <div className="flex items-center gap-3">
+                          {child.icon && <span className="text-xl">{child.icon}</span>}
+                          {child.name}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  href={`/${item.name}`}
+                  className="block py-3 hover:text-[var(--clr-blue-base)]"
+                >
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
           </div>
         </div>
       )}

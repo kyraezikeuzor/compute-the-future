@@ -59,13 +59,13 @@ export default async function Home() {
             </p>
             <div className='flex flex-row gap-2'>
               <Button>
-                <Link href="/virtual-cohorts">
+                <Link href="https://www.instagram.com/computefutures/">
                   <span className='flex flex-row items-center gap-2'>Join Our Community <BotMessageSquare className='w-10 h-10'/></span>
                 </Link>
               </Button>
               <Button variant='outline'>
                 <Link href="/virtual-cohorts">
-                  <span className='flex flex-row items-center gap-2'>Online Classes <BotMessageSquare className='w-10 h-10'/></span>
+                  <span className='flex flex-row items-center gap-2'>Live Classes <BotMessageSquare className='w-10 h-10'/></span>
                 </Link>
               </Button>
             </div>
