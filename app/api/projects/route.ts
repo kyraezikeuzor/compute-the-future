@@ -1,15 +1,6 @@
-// pages/api/airtable/projects.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
-export default async function GET(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  // Ensure only GET requests are allowed
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
+export async function GET() {
   try {
     // Replace with your actual Airtable API key and base ID
     const response = await fetch(
@@ -29,10 +20,16 @@ export default async function GET(
 
     const data = await response.json();
     
-    // Return only the records
-    res.status(200).json(data.records);
+    // Return the records using NextResponse
+    return NextResponse.json(data.records);
   } catch (error) {
     console.error('Error fetching Airtable projects:', error);
-    res.status(500).json({ message: 'Error fetching projects', error: error instanceof Error ? error.message : 'Unknown error' });
+    return NextResponse.json(
+      { 
+        message: 'Error fetching projects', 
+        error: error instanceof Error ? error.message : 'Unknown error' 
+      }, 
+      { status: 500 }
+    );
   }
 }
