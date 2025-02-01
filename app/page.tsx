@@ -69,7 +69,7 @@ export default async function Home() {
             <div className='z-30 w-full rounded-lg '>
               <img className='rounded-xl' src='/images/blair-helping.png'/>
             </div>
-            <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='-top-4 -left-8 xl:right-72 xl:-top-8'>
+            <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='-top-4 left-4 xl:right-72 xl:-top-8'>
               <BookmarkTitle>Join Our Community</BookmarkTitle>
               <BookmarkDescription>
                 Connect, learn, and grow with a passionate group of young innovators.
