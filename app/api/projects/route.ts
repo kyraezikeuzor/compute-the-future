@@ -1,7 +1,7 @@
 // pages/api/airtable/projects.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(
+export default async function GET(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
