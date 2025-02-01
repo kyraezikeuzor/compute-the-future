@@ -30,7 +30,7 @@ export function toTimespan(startDate:string, endDate:string) {
       day: 'numeric',
       year: 'numeric'
   });
-  
+
   const formattedEndDate = new Date(endDate).toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
@@ -41,7 +41,7 @@ export function toTimespan(startDate:string, endDate:string) {
 }
 
 export function toDate(date:string) {
-  var formattedDate = new Date(date).toLocaleDateString('en-US', {
+  const formattedDate = new Date(date).toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
