@@ -161,7 +161,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-16 left-0 right-0 w-full bg-white border-b-2 border-r-2 border-l-2 border-gray-200 shadow-lg">
+        <div className="md:hidden fixed top-12 left-0 right-0 w-full bg-white border-b-2 border-r-2 border-l-2 border-gray-200 shadow-lg">
           <div className="px-5 py-4 space-y-2">
             {navbar.map((item, index) => (
             <div key={index} className="border-b border-gray-100 last:border-0">
