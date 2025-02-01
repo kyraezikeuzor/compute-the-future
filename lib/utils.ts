@@ -25,16 +25,18 @@ export function undoPath(path:string) {
 }
 
 export function toTimespan(startDate:string, endDate:string) {
-  var formattedStartDate = new Date(startDate).toLocaleDateString('en-US', {
+  const formattedStartDate = new Date(startDate).toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
   });
-  var formattedEndDate = new Date(endDate).toLocaleDateString('en-US', {
+  
+  const formattedEndDate = new Date(endDate).toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
   });
+
   return `${formattedStartDate} - ${formattedEndDate}`;
 }
 
