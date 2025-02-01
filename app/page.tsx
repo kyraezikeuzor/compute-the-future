@@ -75,7 +75,7 @@ export default async function Home() {
                 Connect, learn, and grow with a passionate group of young innovators.
               </BookmarkDescription>
             </Bookmark>
-            <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='-bottom-20 lg:-bottom-24 -right-16 xl:left-60 xl:-bottom-10'>
+            <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='-bottom-20 lg:-bottom-24 -right-12 xl:left-60 xl:-bottom-10'>
               <BookmarkTitle>Explore Our Programs</BookmarkTitle>
               <BookmarkDescription>
                 Kids learn coding at their own pace with beginner-friendly resources.

@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar/>
-        <main className="flex-1 container mx-auto px-6 py-24 lg:px-16 xl:px-28 2xl:max-w-[1400px]  bg-[url('/graphics/grid-bg.png')] bg-contain">
+        <main className="flex-1 container mx-auto px-6 py-28 lg:px-16 xl:px-28 2xl:max-w-[1400px]  bg-[url('/graphics/grid-bg.png')] bg-contain">
           {children}
         </main>
         <ContactBanner/>
