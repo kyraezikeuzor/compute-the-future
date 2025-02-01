@@ -11,7 +11,7 @@ import { ContactBanner } from '@/components/ui/contact-banner'
 
 export const metadata: Metadata = {
   title: "We Are Kids Teaching Kids Code - Compute the Future",
-  description: "Compute the Future is passionate about teaching coding, empowering the next generation to make an impact through tech.",
+  description: "We are passionate about teaching coding, empowering the next generation to make an impact through tech.",
   openGraph: {
     images: [
       {
