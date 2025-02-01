@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
     return (
-    <section className='flex flex-col gap-10 md:py-20 md:px-20 lg:px-40'>
+    <section className='flex flex-col gap-10 lg:px-32'>
         <header className='h-full w-full flex flex-col gap-5 justify-between items-center'>
             <Heading as='h1'>Privacy Policy</Heading>
             <p className='lg:text-center md:text-xl'>
-            Welcome to our Privacy Policy. Your privacy is critically important to us. This policy explains how we collect,
+            Your privacy is critically important to us. This policy explains how we collect,
             use, and safeguard your information when you use our website and services.
             </p>
         </header>

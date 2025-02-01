@@ -9,8 +9,8 @@ interface HeadingProps {
 export const Heading: React.FC<HeadingProps> = ({ as: Tag = 'h1', children, className }) => {
   // Assign custom Tailwind classes based on the tag
   const baseStyles = {
-    h1: 'text-6xl lg:text-7xl font-spaceGrotesk font-h1 leading-h1 tracking-tight text-[--clr-brown-base]', // For h1
-    h2: 'text-5xl font-h2 tracking-h2', // For h2
+    h1: 'text-5xl md:text-6xl xl:text-7xl font-spaceGrotesk font-h1 lg:leading-h1 tracking-tight text-[--clr-brown-base]', // For h1
+    h2: 'text-3xl md:text-4xl lg:text-5xl font-h2 tracking-h2', // For h2
     h3: 'text-xl font-h3 tracking-h3 font-semibold', // Example for h3, you can define more
     h4: 'text-h4 font-h4 tracking-h4', // Customize as you need
     h5: 'text-h5 font-h5 tracking-h5 font-medium',

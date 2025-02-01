@@ -45,7 +45,7 @@ export function Footer() {
         </div>
         <div className='flex flex-col gap-3'>
           <EmailForm/>
-          <span className='text-sm text-black/60 text-right'>
+          <span className='text-sm text-black/60 text-center md:text-right'>
               © 2024 Compute the Future Foundation, Inc.
           </span>
         </div>

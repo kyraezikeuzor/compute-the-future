@@ -38,11 +38,11 @@ export default async function Home() {
   }));
   
   return (
-    <section className="flex flex-col min-h-screen gap-32 md:p-20">
+    <section className="flex flex-col min-h-screen gap-32">
         
       <header className="relative h-full w-full flex flex-col gap-32">
         <section className="w-full flex flex-col lg:flex-row gap-12 justify-between items-center text-[--clr-base-text]">   
-          <div className='w-full lg:w-1/2 flex flex-col gap-5 '>
+          <div className='w-full lg:w-1/2 flex flex-col gap-5'>
             <Heading as='h6'>
               We Are Compute the Future
             </Heading>
@@ -69,13 +69,13 @@ export default async function Home() {
             <div className='z-30 w-full rounded-lg '>
               <img className='rounded-xl' src='/images/blair-helping.png'/>
             </div>
-            <Bookmark icon={<BotMessageSquare className='w-10 h-10 text-blue-400'/>} className='top-0 -left-4 lg:right-72 lg:top-1/2 xl:-top-8'>
+            <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='-top-4 -left-8 xl:right-72 xl:-top-8'>
               <BookmarkTitle>Join Our Community</BookmarkTitle>
               <BookmarkDescription>
                 Connect, learn, and grow with a passionate group of young innovators.
               </BookmarkDescription>
             </Bookmark>
-            <Bookmark icon={<BotMessageSquare className='w-10 h-10 text-yellow-400'/>} className='-bottom-20 -right-4 lg:left-60 lg:bottom-1/2 xl:-bottom-10'>
+            <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='-bottom-20 lg:-bottom-24 -right-16 xl:left-60 xl:-bottom-10'>
               <BookmarkTitle>Explore Our Programs</BookmarkTitle>
               <BookmarkDescription>
                 Kids learn coding at their own pace with beginner-friendly resources.
@@ -103,12 +103,12 @@ export default async function Home() {
           </p>
         </div>
         <section className='relative flex flex-col gap-20 justify-between'>
-            <div className='flex flex-col lg:flex-row gap-5 items-center'>
+            <div className='flex flex-col lg:flex-row gap-10 lg:gap-5 items-center'>
               <div className='relative w-full lg:w-1/2 flex flex-col items-center'>
                 <div className="rounded-lg w-fit lg:w-[440px] aspect-[18/18] overflow-hidden">
                   <img className="rounded-lg object-cover w-full h-full" src='/images/gabbi-teaching.png'/>
                 </div>
-                <Bookmark icon={<BotMessageSquare className='w-10 h-10 text-yellow-400'/>} className='w-full -bottom-4 lg:bottom-1/2 xl:bottom-0'>
+                <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='w-fit -left-6 -bottom-4 lg:bottom-10 xl:-bottom-2'>
                   <BookmarkTitle>Inspiring Young Minds In Tech</BookmarkTitle>
                   <BookmarkDescription>
                     We inspire young minds in tech through our shared love of code.
@@ -149,7 +149,7 @@ export default async function Home() {
               </div>
             </div>
             <div className='flex flex-col justify-center items-center'>
-              <Button>Learn More</Button>
+            <Button><Link href='/philosophy'>Learn More</Link></Button>
             </div>
         </section>
       </section>
@@ -158,7 +158,7 @@ export default async function Home() {
         <div>
           <Heading as='h6'>What we teach</Heading>
         </div>
-        <div className='lg:grid grid-cols-[1fr_1fr_1fr] items-center gap-10'>
+        <div className='flex flex-col lg:grid grid-cols-[1fr_1fr_1fr] items-center gap-5 lg:gap-10'>
           <Card>
             <CardHeader>
               <Heading as='h3'>Web Development</Heading>
@@ -197,13 +197,13 @@ export default async function Home() {
           <div className="rounded-xl w-full h-1/3 aspect-[18/7] overflow-hidden">
             <img className='rounded-xl  object-cover w-full h-full' src='/images/classwide.png'/>
           </div>
-          <Bookmark icon={<BotMessageSquare className='w-10 h-10 text-blue-400'/>} className='-left-5 -top-16 lg:top-5 xl:top-0'>
+          <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='-left-5 -top-16 lg:top-5 xl:top-0'>
             <BookmarkTitle>Web Development</BookmarkTitle>
             <BookmarkDescription>
               Students learn to create websites and apps while exploring their creativity and building practical coding skills.
             </BookmarkDescription>
           </Bookmark>
-          <Bookmark icon={<BotMessageSquare className='w-10 h-10 text-green-400'/>} className='-right-5 -bottom-16 lg:bottom-10 xl:-bottom-5'>
+          <Bookmark icon={<BotMessageSquare className='text-green-400'/>} className='-right-5 -bottom-16 lg:bottom-10 xl:-bottom-5'>
             <BookmarkTitle>Engineering Discoveries</BookmarkTitle>
             <BookmarkDescription>
               Students dive into hands-on projects, uncovering engineering concepts and developing problem-solving abilities.
@@ -211,7 +211,7 @@ export default async function Home() {
           </Bookmark>
         </div>
         <div className='flex flex-col items-center'>
-          <Button>Learn More</Button>
+          <Button><Link href='/code-gallery'>Learn More</Link></Button>
         </div>
       </section>
 

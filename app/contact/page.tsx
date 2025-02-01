@@ -4,12 +4,11 @@ import { ContactForm } from '@/components/ui/contact-form'
 
 const Contact = () => {
   return (
-    <section className="flex flex-col gap-10 md:py-20 md:px-20 lg:px-40">
+    <section className="flex flex-col gap-10 lg:px-32">
       <header className="h-full w-full flex flex-col gap-5 justify-between items-center">
         <Heading as="h1">Contact Us</Heading>
         <p className="lg:text-center md:text-xl">
-          Welcome to our Code of Conduct. Our community is built on respect, kindness, and inclusivity. Please take a
-          moment to review the guidelines below.
+          Contact us for all inquiries relating to our programs, volunteering, guides, sponsorships, donations, and more.
         </p>
       </header>
 

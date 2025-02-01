@@ -31,7 +31,7 @@ function TeamMember({member}:{member:Member}) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div className='cursor-pointer flex flex-row gap-5 items-center justify-center py-4 h-full border border-gray-200 rounded-2xl'>
+                <div className='cursor-pointer flex flex-row gap-5 items-center justify-center py-4 h-fit border border-gray-200 rounded-2xl'>
                     <div className='flex flex-col items-center justify-center'>
                         <Avatar className='w-20 h-20' >
                             <AvatarImage src={member.img} alt={`@${member.name}`} />
@@ -66,7 +66,7 @@ function TeamMember({member}:{member:Member}) {
 export default function Team() {
 
     return (
-        <section className='flex flex-col gap-10 md:py-20 md:px-20 lg:px-40'>
+        <section className="flex flex-col gap-10">
             <header className='h-full w-full flex flex-col gap-5 justify-between items-center'>
                 <Heading as='h1'>Our Team</Heading>
                 <p className='lg:text-center md:text-xl'>

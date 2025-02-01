@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const Philosophy = () => {
   return (
-    <section className="flex flex-col gap-10 md:py-20 md:px-20 lg:px-40">
+    <section className="flex flex-col gap-10 lg:px-32">
       <header className="h-full w-full flex flex-col gap-5 justify-between items-center">
         <Heading as="h1">Our Philosophy</Heading>
         <p className="lg:text-center md:text-xl">

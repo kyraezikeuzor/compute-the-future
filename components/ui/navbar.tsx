@@ -124,7 +124,7 @@ export function Navbar() {
   return (
     <nav className='relative w-full flex flex-col items-center sticky top-0 z-50 bg-[--clr-base] border-b-2 border-gray-200 '>
       <div className='w-full bg-[--clr-blue-base] text-white py-1'>
-        <div className='flex flex-row gap-1 items-center justify-center text-sm lg:text-[15px]'>
+        <div className='flex flex-row gap-1 items-center justify-center text-[11px] lg:text-[15px]'>
           <p className='text-center font-normal'>Virtual Computer Science Camps Are in Session</p> <Link href='https://forms.fillout.com/t/eeMcgNH5Fkus' className='ml-1 flex flex-row gap-1 items-center text-yellow-200'>Explore Now <ExternalLink className='w-4 h-4'/></Link>
         </div>
       </div>
@@ -161,7 +161,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-20 left-0 right-0 w-full bg-white border-b-2 border-r-2 border-l-2 border-gray-200 shadow-lg">
+        <div className="md:hidden fixed top-24 left-0 right-0 w-full bg-white border-b-2 border-r-2 border-l-2 border-gray-200 shadow-lg">
           <div className="px-5 py-4 space-y-2">
             {navbar.map((item, index) => (
             <div key={index} className="border-b border-gray-100 last:border-0">

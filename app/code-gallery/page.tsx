@@ -12,7 +12,7 @@ export default async function CodeGallery() {
   const projects = await getProjects();
 
   return (
-    <section className="flex flex-col gap-10 md:py-20 lg:px-40">
+    <section className="flex flex-col gap-10 ">
       <header className="h-full w-full flex flex-col gap-5 justify-between items-center">
         <Heading as="h1">Gallery of Code</Heading>
         <p className="lg:text-center md:text-xl">
