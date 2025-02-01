@@ -3,10 +3,6 @@ import { Heading } from '@/components/ui/heading'
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
   import {
@@ -14,7 +10,6 @@ import {
     AvatarFallback,
     AvatarImage,
   } from "@/components/ui/avatar"
-import { FAQ } from '@/components/ui/faq'
 import { team } from '@/data/team'
 
 import type { Metadata } from "next";

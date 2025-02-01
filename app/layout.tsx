@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
 import { Inter } from "next/font/google";
@@ -7,7 +6,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { Footer } from '@/components/ui/footer'
 import { Navbar } from '@/components/ui/navbar'
-import { FAQ } from '@/components/ui/faq'
 import { ContactBanner } from '@/components/ui/contact-banner'
 
 

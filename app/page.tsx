@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { stats } from '@/data/stats'
 import { reviews } from '@/data/reviews'
 import Link from 'next/link'
 import {  
   BotMessageSquare,
   Info,
-  Code
 } from 'lucide-react'
 import {
   Bookmark,
@@ -20,11 +18,8 @@ import {
 } from '@/components/ui/heading'
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle
 } from '@/components/ui/card'
 import {
   ReviewScroll

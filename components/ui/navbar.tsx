@@ -36,9 +36,6 @@ interface NavItem {
   children?: NavChild[];
 }
 
-interface MobileMenuProps {
-  navbar: NavItem[];
-}
 
 export function hasChildren(item: NavigationItem): item is NavigationItem & { children: NavigationChild[] } {
     return Array.isArray(item.children) && item.children.length > 0;

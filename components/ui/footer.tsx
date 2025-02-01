@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import { EmailForm } from './email-form'
 import { Heading } from './heading'
-import { Logo } from './logo'
 
 import { footer } from '@/data/sitemap';
 import { socials } from '@/data/socials'

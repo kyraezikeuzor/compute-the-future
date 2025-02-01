@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 
 export function toPath(text:string) {
-  let finalString = text.toLowerCase().replaceAll(" ", "-");
+  const finalString = text.toLowerCase().replaceAll(" ", "-");
   return finalString;
 }
 

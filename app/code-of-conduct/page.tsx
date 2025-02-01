@@ -24,7 +24,7 @@ const CodeOfConduct = () => {
           <ul className="list-disc pl-5 md:text-lg">
             <li>Treat everyone with respect and kindness.</li>
             <li>Be thoughtful in how you communicate.</li>
-            <li>Don't be destructive or inflammatory.</li>
+            <li>Don&apos;t be destructive or inflammatory.</li>
             <li>If you encounter an issue, please email us at <a href="mailto:conduct@computefutures.org" className="text-blue-400 underline">conduct@computefutures.org</a>.</li>
           </ul>
         </section>

@@ -76,7 +76,7 @@ export function ContactForm() {
         }
       } catch (error) {
         setSubmitStatus({ 
-          error: 'An error occurred. Please try again later.' 
+          error: `An error occurred. Please try again later. ${error}` 
         });
       }
     }

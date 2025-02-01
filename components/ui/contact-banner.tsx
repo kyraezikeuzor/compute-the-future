@@ -1,8 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 
-const phoneNumber = '+1 (844) 237-2290'
-const phoneNumberUri = '+1-844-237-2290'
 const email = 'contact@computefutures.com'
 
 export function ContactBanner({ className = '' }) {

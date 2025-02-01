@@ -1,6 +1,23 @@
 // lib/airtable.ts
 import { Project } from '@/types';
 
+interface ProjectRecord {
+  id: string,
+  fields: {
+    project_link: string,
+    project_name: string,
+    student_name: string,
+    cover_image: Array<{
+      url: string;
+      filename: string;
+    }>,
+    grade_level: string,
+    year: string,
+    cohort: string,
+    track: string
+  }
+}
+
 export async function getProjects(): Promise<Project[]> {
   try {
     const response = await fetch(
@@ -20,7 +37,7 @@ export async function getProjects(): Promise<Project[]> {
 
     const data = await response.json();
     
-    return data.records.map((record: any) => ({
+    return data.records.map((record: ProjectRecord) => ({
       id: record.id,
       projectLink: record.fields.project_link,
       projectName: record.fields.project_name,

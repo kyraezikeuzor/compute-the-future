@@ -22,7 +22,7 @@ export const ReviewScroll: React.FC<InfiniteReviewsProps> = ({
   itemsPerPage = 6
 }) => {
   const [reviews, setReviews] = useState<ReviewData[]>([]);
-  const [page, setPage] = useState(1);
+  //const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ export const ReviewScroll: React.FC<InfiniteReviewsProps> = ({
       }
 
       setReviews(prev => [...prev, ...newReviews]);
-      setPage(prev => prev + 1);
+      //setPage(prev => prev + 1);
     } catch (error) {
       console.error('Error fetching reviews:', error);
       setHasMore(false);
@@ -95,13 +95,14 @@ export const ReviewScroll: React.FC<InfiniteReviewsProps> = ({
           </div>
         )}
         {!hasMore && !loading && reviews.length > 0 && (
-          <p className="text-gray-500">No more reviews to load</p>
+          <p className="text-gray-500">...</p>
         )}
       </div>
     </div>
   );
 };
 
+/*
 // Example usage with mock data generator
 const generateMockReviews = (page: number, itemsPerPage: number): ReviewData[] => {
   return Array.from({ length: itemsPerPage }, (_, i) => ({
@@ -114,3 +115,4 @@ const generateMockReviews = (page: number, itemsPerPage: number): ReviewData[] =
   }));
 };
 
+*/

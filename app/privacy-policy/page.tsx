@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
         </div>
   
         <div>
-            <Heading as='h3'>Children's Privacy</Heading>
+            <Heading as='h3'>Children&apos;s Privacy</Heading>
             <p>
             Our services are not directed to individuals under the age of 13. We do not knowingly collect personal
             information from children. If we learn that we have collected information from a child under 13, we will delete
