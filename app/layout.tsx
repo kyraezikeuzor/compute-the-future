@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/images/meta/meta-og.jpg",
+        url: "/images/meta/meta-og.png",
         width: 1200,
         height: 630,
         alt: "We Are Kids Teaching Kids Code - Compute the Future",
