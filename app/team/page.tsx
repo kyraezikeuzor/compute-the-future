@@ -70,7 +70,7 @@ export default function Team() {
             <header className='h-full w-full flex flex-col gap-5 justify-between items-center'>
                 <Heading as='h1'>Our Team</Heading>
                 <p className='lg:text-center md:text-xl'>
-                    By the students, for the students. We believe in a world where every young person is empowered to be the change they want to see around them. At Hack Club, we’re working hard to make it reality.
+                    By the students, for the students. Our team believes in encouraging kids to carve out their own futures in technology.
                 </p>
             </header>
             <section className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-2'>

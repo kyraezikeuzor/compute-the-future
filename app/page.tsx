@@ -65,17 +65,17 @@ export default async function Home() {
               </Button>
             </div>
           </div>
-          <div className='relative w-full lg:w-1/2 rounded-lg flex flex-col'>
+          <div className='relative w-full lg:w-1/2 rounded-lg flex flex-col bg-red-300'>
             <div className='z-30 w-full rounded-lg '>
               <img className='rounded-xl' src='/images/blair-helping.png'/>
             </div>
-            <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='-top-4 left-4 xl:right-72 xl:-top-8'>
+            <Bookmark icon={<BotMessageSquare className='text-blue-400'/>} className='w-full -top-4 xl:right-72 xl:-top-8'>
               <BookmarkTitle>Join Our Community</BookmarkTitle>
               <BookmarkDescription>
                 Connect, learn, and grow with a passionate group of young innovators.
               </BookmarkDescription>
             </Bookmark>
-            <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='-bottom-20 lg:-bottom-24 -right-12 xl:left-60 xl:-bottom-10'>
+            <Bookmark icon={<BotMessageSquare className='text-yellow-400'/>} className='w-full -bottom-20 lg:-bottom-24 xl:left-60 xl:-bottom-10'>
               <BookmarkTitle>Explore Our Programs</BookmarkTitle>
               <BookmarkDescription>
                 Kids learn coding at their own pace with beginner-friendly resources.
