@@ -3,7 +3,7 @@ export const reviews = [
         "reviewer": "Oliver K.",
         "occupation": "Student at St. Francis de Sales School",
         "date": "2024",
-        "review": "Coding is fun and I got to learn a lot of new things.",
+        "review": "Coding is fun, and I got to learn a lot of new things.",
         "location": "US"
     },
     {
