@@ -1,30 +1,23 @@
 export const reviews = [
     {
-        "reviewer": "Noah H.",
+        "reviewer": "Oliver K.",
         "occupation": "Student at St. Francis de Sales School",
         "date": "2024",
-        "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae repudiandae veritatis saepe tempora consequatur, quam velit dolor enim ut?",
+        "review": "Coding is fun and I got to learn a lot of new things.",
         "location": "US"
     },
     {
-        "reviewer": "Rebecca H.",
+        "reviewer": "Nmaetongi B.",
         "occupation": "Student",
         "date": "2024",
-        "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae repudiandae veritatis saepe tempora consequatur, quam velit dolor enim ut?",
+        "review": "I'm making my own website now. It's really cool.",
         "location": "US"
     },
     {
-        "reviewer": "John H.",
+        "reviewer": "Elayne F.",
         "occupation": "Student",
         "date": "2024",
-        "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae repudiandae veritatis saepe tempora consequatur, quam velit dolor enim ut?",
-        "location": "US"
-    },
-    {
-        "reviewer": "Celebrity M.",
-        "occupation": "Student",
-        "date": "2024",
-        "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae repudiandae veritatis saepe tempora consequatur, quam velit dolor enim ut?",
+        "review": "I'm really enjoying this program. Coding is pretty fun.",
         "location": "US"
     }
 ]
