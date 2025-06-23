@@ -65,7 +65,7 @@ export default async function Home() {
               </Button>
             </div>
           </div>
-          <div className='relative w-full lg:w-1/2 rounded-lg flex flex-col bg-red-300'>
+          <div className='relative w-full lg:w-1/2 rounded-lg flex flex-col'>
             <div className='z-30 w-full rounded-lg '>
               <img className='rounded-xl' src='/images/blair-helping.png'/>
             </div>
